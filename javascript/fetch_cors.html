@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+
+// CORS => Cross Origin Resorce Sharing
+// 別なオリジン（ドメインとかポート）のリソースを使うこと
+
+// cd ~/Projects/typescript-sample && yarn ts-node src/server/cors.ts
+// ↑このサーバは Access-Control-Allow-Origin しているので正常に返る
+fetch("http://localhost:7400").then((response) => {
+  console.log(response);
+})
+
+// cd ~/Projects/typescript-sample && yarn ts-node src/server/show_request_header.ts
+// ↑このサーバは Response ヘッダに特別何も追加してないのでエラーになる
+// fetch("http://localhost:6400").then((response) => {
+//   console.log(response);
+// })
+
+// 他所様のサイト、Access-Control-Allow-Origin してくれている
+fetch("https://azu.github.io/promises-book/json/book.json").then((response) => {
+  console.log(response);
+})
+
+// オプション
+// no-cors => CORSなオリジンに行っても、エラーにならず、空のレスポンスが返る
+fetch("http://localhost:6400", { mode: "no-cors" }).then((response) => {
+  console.log(response);
+})
+
+</script>
+</body>
+</html>
