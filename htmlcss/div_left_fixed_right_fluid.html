@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+}
+
+div.wrapper {
+  overflow: hidden;
+  border: 1px solid #333;
+  width: 800px
+}
+
+div.fixed {
+  float: left;
+  width: 200px;
+  background: #eee;
+}
+
+div.fluid {
+  float: right;
+  width : calc(100% - 200px);
+  background: #ccc;
+}
+
+span {
+  padding: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="fixed">
+    <span>固定幅</span>
+  </div>
+  <div class="fluid">
+    <span>残り全部</span>
+  </div>
+</div>
+
+</body>
+</html>

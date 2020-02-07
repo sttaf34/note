@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+div.container {
+  border: 1px solid black;
+  width: 500px;
+}
+div.left {
+  display: table-cell;
+}
+div.right {
+  display: table-cell;
+  background: whitesmoke;
+  width: 80px;
+  position: relative;
+}
+div.right p {
+  border: 1px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <h3>
+      あああああああああああああああああああああああああああああ
+    </h3>
+    <p>
+      右側の矢印的なものを上下左右の中央寄せしている。あああああああああ。
+      ああああああああああああああああああああいいいいいいいいいいいいい。
+      いいいいいいいいいいいいいいい。
+    </p>
+  </div>
+  <div class="right">
+    <p>></p>
+  </div>
+</div>
+
+</body>
+</html>

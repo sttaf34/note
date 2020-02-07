@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+table {
+  counter-reset: td-number; /* 何かしらの名前を指定する */
+}
+
+td:before {
+  /* counter-reset:で指定した何かしらの名前を使う */
+  counter-increment: td-number;
+  content: counter(td-number)" → ";
+}
+
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td>あ</td>
+    <td>あ</td>
+    <td>あ</td>
+    <td>あ</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 20px;
+  letter-spacing: 0.2em;;
+}
+p {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+p:hover {
+  /* いろんな指定ができる内の一例 */
+  /* name duration timing-function */
+  animation: aAnimation 1s ease;
+}
+@keyframes aAnimation {
+  50% { transform:translateY(30px) }
+  100% { transform:translateY(0) }
+}
+
+/* FF4のダメージっぽいアニメーション */
+span.d10{
+  display: inline-block;
+  animation: spanAnimation10 0.8s ease;
+}
+@keyframes spanAnimation10 {
+  0%   { transform:translateY(-12px) }
+  5%  { transform:translateY(-24px) }
+  10%  { transform:translateY(-27px) }
+  15%  { transform:translateY(-30px) }
+  20%  { transform:translateY(-27px) }
+  25%  { transform:translateY(-24px) }
+  30%  { transform:translateY(-12px) }
+  35%  { transform:translateY(-0px) }
+  40%  { transform:translateY(-5px) }
+  45%  { transform:translateY(-9px) }
+  50%  { transform:translateY(-5px) }
+  55%  { transform:translateY(-0px) }
+  60%  { transform:translateY(0px) }
+  65%  { transform:translateY(0px) }
+  70%  { transform:translateY(0px) }
+  75%  { transform:translateY(0px) }
+  80%  { transform:translateY(0px) }
+  85%  { transform:translateY(0px) }
+  90%  { transform:translateY(0px) }
+  95%  { transform:translateY(0px) }
+  100% { transform:translateY(0px) }
+}
+span.d1{
+  display: inline-block;
+  animation: spanAnimation1 0.8s ease;
+}
+@keyframes spanAnimation1 {
+  0%   { transform:translateY(0px) }
+  5%  { transform:translateY(-12px) }
+  10%  { transform:translateY(-24px) }
+  15%  { transform:translateY(-27px) }
+  20%  { transform:translateY(-30px) }
+  25%  { transform:translateY(-27px) }
+  30%  { transform:translateY(-24px) }
+  35%  { transform:translateY(-12px) }
+  40%  { transform:translateY(0px) }
+  45%  { transform:translateY(-5px) }
+  50%  { transform:translateY(-9px) }
+  55%  { transform:translateY(-5px) }
+  60%  { transform:translateY(0px) }
+  65%  { transform:translateY(0px) }
+  70%  { transform:translateY(0px) }
+  75%  { transform:translateY(0px) }
+  80%  { transform:translateY(0px) }
+  85%  { transform:translateY(0px) }
+  90%  { transform:translateY(0px) }
+  95%  { transform:translateY(0px) }
+  100% { transform:translateY(0px) }
+}
+</style>
+</head>
+<body>
+  <p></p>
+  <br />
+  <br />
+  <span class="d10">3</span><span class="d1">3</span>
+</body>
+</html>

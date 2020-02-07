@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+}
+p.message {
+  border: 1px solid skyblue;
+}
+p.message:empty {
+  border: 0px solid skyblue;
+  display: none;
+}
+
+</style>
+</head>
+<body>
+
+  <p class="message">保存しました！</p>
+  <p class="message"></p>
+
+  <p>
+    通知メッセージがあるときは表示され、
+    <br>
+    通知メッセージが空文字のときは表示しない。
+  </p>
+
+</body>
+</html>

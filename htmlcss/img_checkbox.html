@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+body {
+  margin: 50px 0 0 50px;
+}
+input[type='checkbox'] {
+  display:none;
+}
+img {
+  border: 1px solid whitesmoke;
+}
+/* https://webliker.info/css-selector-cheat-sheet/ */
+/* 「+」は隣の要素を対象にする書き方 */
+input[type="checkbox"]:checked + img {
+  border: 1px solid red;
+}
+
+</style>
+</head>
+<body>
+
+<label>
+  <input type="checkbox" name="fruit" value="apple" />
+  <img src="http://placehold.jp/120x120.png">
+</label>
+<label>
+  <input type="checkbox" name="fruit" value="orange" />
+  <img src="http://placehold.jp/120x120.png">
+</label>
+<label>
+  <input type="checkbox" name="fruit" value="grape" />
+  <img src="http://placehold.jp/120x120.png">
+</label>
+<br />
+画像を使ったチェックボックス
+
+</body>
+</html>
