@@ -17,3 +17,6 @@ ALTER TABLE users ADD COLUMN favorite_number INT AFTER favorite_color;
 
 -- 変更例、コメント追加
 ALTER TABLE users MODIFY email char(64) COMMENT 'メールアドレス';
+
+-- テーブル名変更
+ALTER TABLE users RENAME TO customers;
