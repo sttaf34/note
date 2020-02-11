@@ -14,3 +14,8 @@ git remote add origin git@bitbucket.org:sttaf34/sttaf34.net.git
 
 # 接続先変更
 git remote set-url origin git@github.com:sttaf34/sttaf34.net.git
+
+# 接続先削除
+# starter 系のプロジェクトを元に、別のプロジェクトを始めるときに、
+# clone してディレクトリ名を変えただけだと、starter の方に push してしまうので
+git remote rm origin
