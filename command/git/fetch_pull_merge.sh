@@ -9,3 +9,7 @@ git diff master origin/master
 
 # master に origin/master をマージ
 git merge master origin/master
+
+# リモートにだけ存在している特定のブランチにチェックアウト
+# git checkout -b <ローカルで新たに作成するブランチ名> <リモートのブランチ名>
+git checkout -b branch_a origin/branch_a
