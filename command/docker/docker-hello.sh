@@ -14,13 +14,14 @@ docker image build -t sttaf34/mysql:5.7 .
 
 # コンテナ起動、localhost:8080 でアクセスできる
 # -p -> Macとコンテナのポートマッピング
-docker container run -p 8080:80 httpd
+docker container run -p 8080:80 httpd:2.4
+docker container run -p 8080:80 nginx:1.17
 
 # --rm -> コンテナ停止時にコンテナ削除
-docker container run -p 8080:80 --rm httpd
+docker container run -p 8080:80 --rm httpd:2.4
 
 # -d -> バックグラウンドでコンテナ起動
-docker container run -p 8080:80 --rm -d httpd
+docker container run -p 8080:80 --rm -d httpd:2.4
 
 # busyboxは最小限の機能を備えた非常に軽量なOS」とのこと
 # -i -> コンテナの標準入力をホストの標準入力に接続
