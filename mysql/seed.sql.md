@@ -85,7 +85,10 @@ INSERT INTO comments
 VALUES
   (1, 1, 1, '補足です。32度でした。'),
   (2, 1, 2, 'それは何よりでしたね。'),
-  (3, 3, 2, 'こんばんは');
+  (3, 3, 2, 'こんばんは'),
+  (4, 8, 3, 'Hello, World!'),
+  (5, 9, 4, 'Good morning!'),
+  (6, 10, 2, 'My name is nantoka.');
 
 # scores
 
