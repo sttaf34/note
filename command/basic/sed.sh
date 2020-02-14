@@ -16,3 +16,9 @@ echo $PATH | sed -e "s/:/\n/g"
 # d -> 行番号指定で削除
 # 1行目から5行目を削除して6行目以降を出力している
 history | tail -10 | sed "1,5d"
+
+# 先頭になにか文字を追加したい場合
+history | tail -10 | sed -e "s@^@history =>@"
+
+# 末尾になにか文字を追加したい場合
+history | tail -10 | sed -e "s/\$/ hello/"
