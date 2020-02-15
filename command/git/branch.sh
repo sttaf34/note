@@ -13,3 +13,7 @@ git branch -m NEW_BRANCH_NAME
 
 # これでも可
 git branch -m OLD_BRANCH_NAME NEW_BRANCH_NAME
+
+# リモートにだけ存在している特定のブランチにチェックアウト
+# git checkout -b <ローカルで新たに作成するブランチ名> <リモートのブランチ名>
+git checkout -b branch_a origin/branch_a
