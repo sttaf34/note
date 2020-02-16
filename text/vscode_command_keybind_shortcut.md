@@ -10,6 +10,7 @@ View: Toggle Maximized Panel
 View: Toggle Word Wrap
 Tasks: Rerun Last Task
 Tasks: Run Task
+View: Split Editor Down
 
 # よく使うキーバインド
 
