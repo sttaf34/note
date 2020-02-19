@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+ol li {
+  display: inline;
+  list-style-type: none;
+}
+
+/* 「+」で隣の要素を指定する                      */
+/* https://webliker.info/css-selector-cheat-sheet/ */
+/* 一個手前に li がある li ってことになる         */
+ol li + li {
+  color: red;
+}
+
+/* 「一個手前に li がある li 」の前方に before 擬似要素を追加 */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/::after       */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/::before      */
+ol li + li:before{
+  content: " > ";
+}
+
+</style>
+</head>
+<body>
+
+<ol>
+  <li>Home</li>
+  <li>Category</li>
+  <li>Title</li>
+</ol>
+
+</body>
+</html>

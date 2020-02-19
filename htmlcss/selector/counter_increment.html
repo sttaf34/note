@@ -15,13 +15,12 @@ table, tr, td {
 }
 
 table {
-  counter-reset: td-number; /* 何かしらの名前を指定する */
+  counter-reset: td-number; /* 名前を自分で決めて指定する */
 }
 
 td:before {
-  /* counter-reset:で指定した何かしらの名前を使う */
-  counter-increment: td-number;
-  content: counter(td-number)" → ";
+  counter-increment: td-number;      /* counter-reset:で指定した名前を使う */
+  content: counter(td-number)" → "; /* counter-reset:で指定した名前を使う */
 }
 
 </style>
