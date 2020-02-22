@@ -30,3 +30,10 @@ grep -e '^git' -r ~/Projects/note/command --color=auto | head
 
 # --color=always -> パイプで渡した先でも色がつく
 grep -e '^git' -r ~/Projects/note/command --color=always | head
+
+# ワイルドカードを使えば、1つの階層下のファイルだけを対象にできるが
+# ディレクトリが含まれていると「Is a directory」が邪魔になる
+# -s -> エラーメッセージを表示しない、「Is a directory」は表示されない
+grep '100%' -s ~/Projects/note/htmlcss/*
+
+# 2階層以内の範囲を検索対象にしたいとかなら find と組み合わせることになる
