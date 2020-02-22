@@ -13,6 +13,10 @@ echo "cat cat" | sed -e "s@cat@dog@g"
 # 環境変数を改行で分割して見やすく表示
 echo $PATH | sed -e "s/:/\n/g"
 
+# n -> 出力コマンド以外の出力は行わない
+# 1行目から5行目だけを出力する場合
+history | tail -10 | sed -n "1,5p"
+
 # d -> 行番号指定で削除
 # 1行目から5行目を削除して6行目以降を出力している
 history | tail -10 | sed "1,5d"
