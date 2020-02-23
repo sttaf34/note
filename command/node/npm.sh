@@ -2,8 +2,30 @@
 # まとまってる
 https://qiita.com/standard-software/items/2ac49a409688733c90e7
 
+#
+# グローバル
+#
+
 # バージョン確認
 npm -v
+
+# グローバルにインストールし、パスを通す
+npm install -g serve
+nodenv rehash
+
+# グローバルにインスコしたものの一覧
+# 階層を指定しないととんでもない数になっている
+npm ls -g --depth=0
+
+# 削除
+npm uninstall -g serve
+
+# 更新
+npm update -g serve
+
+#
+# プロジェクト内は yarn でやるようにしている
+#
 
 # 対話でカレントディレクトリにpackage.jsonを生成
 npm init
@@ -30,24 +52,9 @@ npm install --save-dev prettier
 npm i -D @typescript-eslint/parser
 npm i -D eslint-config-prettier
 
-# git pull してきた場合、node_modulesは空っぽだったりする
+# git pull してきた場合、node_modules 下は空っぽ
 # 以下を実行すれば、package.jsonの内容でinstallする
 npm install
 
-# カレントディレクトリ下ではなく、グローバルにインスコ
-npm install -g gatsby-cli
-npm install -g create-react-app
-npm install -g serve
-
 # node_modules下を再インスコ
 npm rebuild
-
-# グローバルにインスコしたものの一覧
-# 階層を指定しないととんでもない数になっている
-npm ls -g --depth=0
-
-# 削除
-npm uninstall -g serve
-
-# 更新
-npm update -g serve
