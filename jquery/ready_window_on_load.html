@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div id="container">
+    <p>あ</p>
+  </div>
+</body>
+</html>
+
+<script>
+
+$(document).ready(function() {
+  console.log("ready.");
+})
+
+// ↑を短く書いた形、基本こっちが使われる
+$(function() {
+  console.log("DOMツリー構築後");
+});
+
+$(window).on('load', function() {
+  console.log("画像等も読み込み後");
+});
+
+</script>

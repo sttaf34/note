@@ -10,3 +10,6 @@ cd ~/Projects/note/jquery && browser-sync start --server --files "*"
 # browser-sync は自動でリロードされるので、すごく楽
 
 # https://www.browsersync.io/
+
+# グローバルにしてしまう
+# npm install -g browser-sync
