@@ -18,8 +18,11 @@ cd ~/Projects/note
 tar cf text.tar text
 
 # 中身のファイル一覧の確認
-# t 一覧を表示
+# t => 一覧を表示
 tar tf text.tar
 
-# x アーカイブから展開する
+# x => アーカイブから展開する
 tar xf text.tar
+
+# アーカイブを作成し、アーカイブ対象は削除する
+tar cf text.tar text --remove-files
