@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <ul>
+    <li id="user1" data-id="1" data-name="sttaf34">あ</li>
+    <li id="user2" data-id="2" data-name="sttaf34">い</li>
+  </ul>
+</body>
+</html>
+
+<script>
+
+$(function() {
+  // HTML に data 属性が書いてあるときの取得
+  console.log($('#user1').data('id'))
+  console.log($('#user1').data('name'))
+});
+
+</script>
