@@ -4,7 +4,7 @@ env echo $HOME
 
 # -i -> 環境変数が設定されてない状態でコマンド実行する
 # pwd も見つからないとなる、どんな時に使うかはわからない
-env pwd
+env -i pwd
 
 # Shebang はインタプリタの指定
 #!/bin/sh
