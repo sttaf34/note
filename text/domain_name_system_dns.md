@@ -12,6 +12,9 @@
 # 逆引き
 - DNSを使って、IPアドレスに対応するドメイン名を求めること。
 
+# コマンド
+~/Projects/note/command/network/nslookup_dig.sh
+
 # DNSレコードの例
 
 ## A
@@ -29,6 +32,10 @@
 ## CNAME
 - キーがドメイン、値もドメイン
 - www.sttaf34.net -> sttaf34.netlify.com
+
+## TXT
+- キーがドメイン、値は文字列
+- サイトの所有権を示すのに使われる
 
 ## PTR
 - キーがIPアドレス、値がドメイン
