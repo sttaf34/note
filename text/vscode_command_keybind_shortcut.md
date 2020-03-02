@@ -5,12 +5,14 @@
 Change File Encoding
 Preferences: Open Keyboard Shortcuts
 Preferences: Open User Settings
-View: Toggle Panel Position
 View: Toggle Maximized Panel
 View: Toggle Word Wrap
 Tasks: Rerun Last Task
 Tasks: Run Task
 View: Split Editor Down
+File: Reveal Active File in Side Bar
+View: Move Panel Right
+View: Move Panel Bottom
 
 # よく使うキーバインド
 
