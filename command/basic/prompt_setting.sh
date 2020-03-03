@@ -42,3 +42,6 @@ export PS1="${_GREEN}[\w]${_RESET}${_YELLOW}\$(__git_ps1)${_RESET}\n\$ "
 # SSH接続先用の設定
 export PS1="\[\e[1;35m\](gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
 export PS1="\[\e[1;35m\](aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
+
+export PS1="\[\e[1;31m\](root@gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
+export PS1="\[\e[1;31m\](root@aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
