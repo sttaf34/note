@@ -11,7 +11,7 @@ SELECT * FROM users;                       -- 念の為に確認
 --
 -- トランザクションでロールバックする
 --
-begin;                         -- トランザクション開始
+BEGIN;                         -- トランザクション開始
 UPDATE users SET height = 175; -- WHERE を書き忘れてしまった！
 SELECT * FROM users;           -- やばい！
 ROLLBACK;                      -- 戻せる
