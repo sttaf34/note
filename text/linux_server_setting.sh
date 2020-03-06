@@ -1,3 +1,8 @@
+
+# 環境
+# Amazon Lightsail
+# Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-1021-aws x86_64)
+
 #
 # 作業ユーザの追加と sudo 権限
 #
@@ -45,3 +50,10 @@ sudo /etc/init.d/ssh restart
 # ufw でファイアウォールの設定も必要
 # Lightsail コンパネのファイアウォールの設定も必要
 # 設定変更後、別ターミナルで ssh でログインできることを確認すること
+
+#
+# そのほか設定
+#
+
+# ホスト名変更
+sudo hostnamectl set-hostname aws

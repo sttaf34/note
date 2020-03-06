@@ -21,6 +21,7 @@ RED="$(tput setaf 9)"
 GREEN="$(tput setaf 10)"
 YELLOW="$(tput setaf 11)"
 PINK="$(tput setaf 13)"
+WATER="$(tput setaf 87)"
 ORANGE="$(tput setaf 209)"
 RESET="$(tput sgr0)"
 
@@ -33,6 +34,7 @@ _RED="\[$(tput setaf 9)\]"
 _GREEN="\[$(tput setaf 10)\]"
 _YELLOW="\[$(tput setaf 11)\]"
 _PINK="\[$(tput setaf 13)\]"
+_WATER="\[$(tput setaf 14)\]"
 _ORANGE="\[$(tput setaf 209)\]"
 _RESET="\[$(tput sgr0)\]"
 
@@ -42,6 +44,7 @@ export PS1="${_GREEN}[\w]${_RESET}${_YELLOW}\$(__git_ps1)${_RESET}\n\$ "
 # SSH接続先用の設定
 export PS1="\[\e[1;35m\](gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
 export PS1="\[\e[1;35m\](aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
+export PS1="${_PINK}(\h)${_RESET} ${_YELLOW}[\w]${_RESET}\n\$ "
 
 export PS1="\[\e[1;31m\](root@gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
 export PS1="\[\e[1;31m\](root@aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
