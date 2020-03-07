@@ -1,8 +1,5 @@
 
-# GCPの無料枠で運用しているDebian上でいろいろインストールする
-
-# 初期設定だとパスワード無しでsudoできる
-sudo apt-get install rsync
+# GCP の無料枠で運用している Ubuntu 上でいろいろインストールする
 sudo apt-get install mysql-server
 sudo apt-get install less
-sudo apt-get install unzip
+sudo apt-get install logwatch

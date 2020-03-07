@@ -57,3 +57,6 @@ sudo /etc/init.d/ssh restart
 
 # ホスト名変更
 sudo hostnamectl set-hostname aws
+
+# ログインのログ確認
+cat /var/log/auth.log | grep sshd

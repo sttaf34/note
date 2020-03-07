@@ -42,4 +42,4 @@ sudo mysql --show-warnings
 > DROP USER sttaf34@localhost;
 
 # ユーザ確認
-> SELECT Host, User, Password FROM mysql.user;
+> SELECT Host, User FROM mysql.user;

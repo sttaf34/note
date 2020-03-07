@@ -46,5 +46,4 @@ export PS1="\[\e[1;35m\](gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
 export PS1="\[\e[1;35m\](aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
 export PS1="${_PINK}(\h)${_RESET} ${_YELLOW}[\w]${_RESET}\n\$ "
 
-export PS1="\[\e[1;31m\](root@gcp)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
-export PS1="\[\e[1;31m\](root@aws)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "
+export PS1="\[\e[1;31m\](root@\h)\[\e[00m\] \[\e[1;33m\][\w]\[\e[00m\]\n\$ "

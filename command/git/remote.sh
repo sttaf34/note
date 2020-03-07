@@ -19,3 +19,14 @@ git remote set-url origin git@github.com:sttaf34/sttaf34.net.git
 # starter 系のプロジェクトを元に、別のプロジェクトを始めるときに、
 # clone してディレクトリ名を変えただけだと、starter の方に push してしまうので
 git remote rm origin
+
+
+# [~/.ssh/config]
+# Host github.com
+#   HostName github.com
+#   User git
+#
+# git@github.com:sttaf34/sttaf34.net.git
+# ↑     ↑
+# User  Host(HostNameではなく)
+# のような対応になってる
