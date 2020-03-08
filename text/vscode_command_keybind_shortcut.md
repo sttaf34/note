@@ -13,6 +13,7 @@ View: Split Editor Down
 File: Reveal Active File in Side Bar
 View: Move Panel Right
 View: Move Panel Bottom
+vscode-json: *
 
 # よく使うキーバインド
 
