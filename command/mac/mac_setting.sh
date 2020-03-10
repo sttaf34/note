@@ -16,3 +16,7 @@ defaults write com.apple.screencapture name ""
 
 # スクショ設定の有効化
 killall SystemUIServer
+
+# .DS_Store ファイルを作らない or 作る
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores false
