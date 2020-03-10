@@ -1,3 +1,7 @@
+-- https://dbstudy.info/files/20140907/mysql_lock_r2.pdf
+-- https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html
+-- ↑日本語ページはない
+
 --
 -- 設定確認と準備
 --
@@ -31,7 +35,7 @@ PAGER cat
 -- (3, 5] 3 より大きく 5 以下
 
 --
--- レコードロック
+-- クラスタインデックスに対して等価検索・レコードロック
 --
 
 BEGIN;
@@ -46,7 +50,7 @@ SHOW ENGINE INNODB STATUS\G
 COMMIT;
 
 --
--- ギャップロック
+-- クラスタインデックスに対して等価検索して空振り・ギャップロック
 --
 
 BEGIN;
@@ -63,8 +67,9 @@ SHOW ENGINE INNODB STATUS\G
 COMMIT;
 
 --
--- ネクストキーロック
+-- クラスタインデックスに対して範囲検索・ネクストキーロック
 --
+
 BEGIN;
 SELECT * FROM accounts WHERE id BETWEEN 4 AND 5 FOR UPDATE;
 SHOW ENGINE INNODB STATUS\G
@@ -79,3 +84,4 @@ SHOW ENGINE INNODB STATUS\G
 -- 8000000a => id = 10 がレコードロックされ、手前がギャップロックされる
 -- INSERT されているデータ的に (3, 5] と (5, 10] の区間ということになる
 -- 区間を合わせると (3, 10] になる
+COMMIT;
