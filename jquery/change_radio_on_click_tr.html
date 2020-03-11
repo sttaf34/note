@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<style type="text/css">
+
+table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid silver;
+  padding: 3px;
+}
+
+tr:hover {
+  background-color: cornsilk;
+}
+
+</style>
+
+</head>
+<body>
+  <table>
+    <tr data-index="0">
+      <td><input name="radio" id="radio-0" type="radio"></td>
+      <td>行クリックでラジオボタン切り替え</td>
+    </tr>
+    <tr data-index="1">
+      <td><input name="radio" id="radio-1" type="radio"></td>
+      <td>行クリックでラジオボタン切り替え</td>
+    </tr>
+    <tr data-index="2">
+      <td><input name="radio" id="radio-2" type="radio"></td>
+      <td>行クリックでラジオボタン切り替え</td>
+    </tr>
+  </table>
+<script>
+
+$('tr').on('click', function() {
+  let index = $(this).data('index');
+  $('#radio-' + index).prop('checked', true);
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+<style type="text/css">
+
+table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid silver;
+  padding: 3px 6px;
+}
+table {
+  margin: 5px 2px;
+}
+td {
+  width: 150px;
+}
+
+i {
+  margin: 0 60px;
+}
+i:hover {
+  cursor: grab;
+}
+
+</style>
+
+</head>
+<body>
+  <span>ドラッグ＆ドロップで順番変更</span>
+  <table>
+    <tbody id="sortable">
+      <tr>
+        <td><span class="sort">1</span></td>
+        <td><i class="fas fa-arrows-alt-v"></i></td>
+      </tr>
+      <tr>
+        <td><span class="sort">2</span></td>
+        <td><i class="fas fa-arrows-alt-v"></i></td>
+      </tr>
+      <tr>
+        <td><span class="sort">3</span></td>
+        <td><i class="fas fa-arrows-alt-v"></i></td>
+      </tr>
+    </tbody>
+  </table>
+<script>
+
+var sorts = [];
+
+$(function() {
+  $("#sortable").sortable({
+    cursor: "grabbing",
+    opacity: 0.7,
+    update: function(event, ui) {
+      sorts = $('#sortable').sortable("toArray");
+      $('span.sort').each(function(i) {
+        $(this).text(i + 1);
+      });
+      console.log(sorts);
+    }
+  });
+});
+
+</script>
+</body>
+</html>
