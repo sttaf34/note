@@ -11,17 +11,19 @@ SET GLOBAL innodb_status_output_locks = ON;
 SELECT @@innodb_status_output;
 SELECT @@innodb_status_output_locks;
 
-DROP TABLE IF EXISTS members;
-CREATE TABLE members (
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders (
   id INT PRIMARY KEY,
+  user_id INT NOT NULL,
   group_id INT NOT NULL,
+  INDEX index_user_id(user_id),
   INDEX index_group_id(group_id)
 );
 INSERT INTO
-  members (id, group_id)
+  orders (id, user_id, group_id)
 VALUES
   (1, 35), (2, 42);
-SELECT * FROM members;
+SELECT * FROM orders;
 
 PAGER awk '/Trx id counter/, /FILE I\/O/';
 

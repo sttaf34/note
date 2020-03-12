@@ -2,8 +2,6 @@
 # ダミーデータ作成サービス => https://www.mockaroo.com/
 
 # setup
-drop database sample;
-create database sample;
 use sample;
 
 # users
