@@ -49,7 +49,60 @@ sudo /etc/init.d/ssh restart
 
 # ufw でファイアウォールの設定も必要
 # Lightsail コンパネのファイアウォールの設定も必要
-# 設定変更後、別ターミナルで ssh でログインできることを確認すること
+#
+# 設定変更後、別ターミナルで ssh でログインできることを確認する
+# 設定を間違って、二度と入れなくなってしまう可能性があるので
+
+#
+# msmtp
+#
+
+# インスコ
+sudo apt-get install msmtp msmtp-mta
+
+# 設定ファイルをコピーして編集
+sudo cp /usr/share/doc/msmtp/examples/msmtprc-system.example /etc/msmtprc
+sudo vi /etc/msmtprc
+
+# # Set default values for all following accounts.
+# defaults
+# syslog         on
+# tls            on
+# tls_trust_file /etc/ssl/certs/ca-certificates.crt
+# auth           on
+# syslog         LOG_MAIL
+# tls_starttls   off
+#
+# # Gmail
+# account      gmail
+# host         smtp.gmail.com
+# port         465
+# from         sttaf34@gmail.com
+# user         sttaf34
+# passwordeval "cat ~/.gmail.password"
+
+# 送信テスト
+sudo echo "hello system msmtp" | msmtp -a gmail sttaf34@gmail.com
+
+#
+# logwatch
+#
+
+# インスコ
+sudo apt-get install logwatch
+
+# 自動的に cron で動くように設定される
+/etc/cron.daily/00logwatch
+
+# 設定ファイルをコピーして編集
+sudo cp /usr/share/logwatch/default.conf/logwatch.conf /etc/logwatch/conf/
+sudo vi /etc/logwatch/conf/logwatch.conf
+
+# 自分宛てに送信する設定
+# mailer = "/usr/bin/msmtp -a gmail sttaf34@gmail.com"
+
+# 送信テスト
+sudo logwatch --output mail
 
 #
 # そのほか設定
