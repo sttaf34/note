@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <p id="message">あああ</p>
+  <input type="text" value="aaa">
+  <button id="button">ボタン</button>
+</body>
+</html>
+
+<script>
+
+$(function() {
+  $('button#button').on('click', function() {
+    // 取得と設定
+    var message = $("p#message").text();
+    $("p#message").text(message + message);
+
+    // 取得と設定
+    var value = $("input").val();
+    $("input").val(value + value);
+  });
+});
+
+</script>
