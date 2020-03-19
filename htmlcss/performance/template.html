@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<link href="css/all.css" rel="stylesheet">
+
+<!-- 印刷用のCSSを別ファイルにすれば、非印刷時はレンダリングブロックしない -->
+<link href="css/print.css" rel="stylesheet" media="print">
+</head>
+<body>
+
+<ul>
+  <li>
+    <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=ja">
+      レンダリング ツリーの構築、レイアウト、ペイント＠Google
+    </a>
+  </li>
+  <li>
+    <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript?hl=ja">
+      JavaScript を使用してインタラクティブにする＠Google
+    </a>
+  </li>
+</ul>
+
+<ul>
+  <li>DOM (Document Object Model) → HTMLを木構造で表現したもの</li>
+  <li>CSSOM → CSSを木構造で表現したもの</li>
+  <li>レンダリングツリー → DOM と CSSOM を組み合わせたもの</li>
+  <li>CSSOM の構築が完了するまでレンダリングは開始しない</li>
+  <li>DOMContentLoaded → DOMが構築完了したタイミング</li>
+</ul>
+
+</body>
+</html>
