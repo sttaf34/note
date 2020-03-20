@@ -1,5 +1,4 @@
 
-# https://wiki.debian.org/MySql
 # sudo apt-get install mysql-server が済んでいるとして
 
 #

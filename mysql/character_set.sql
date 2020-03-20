@@ -16,6 +16,18 @@ show variables like "chara%";
 -- +--------------------------+----------------------------+
 -- ↑このようにしとくのが無難らしい
 
+-- 設定ファイルの場所を確認
+-- mysql --help | grep 'my.cnf'
+
+-- 以下の設定をする
+-- [mysqld]
+-- character-set-server = utf8mb4
+-- [client]
+-- default-character-set = utf8mb4
+
+-- 再起動する
+-- sudo /etc/init.d/mysql restart
+
 -- --default-character-set=utf8mb4 で影響するのは
 -- character_set_client, character_set_connection, character_set_results の3つ
-mysql -u root -p --default-character-set=utf8mb4
+-- mysql -u root -p --default-character-set=utf8mb4
