@@ -31,3 +31,19 @@ SELECT
   COUNT(id)
 FROM users
 GROUP BY height_type;
+
+-- 曜日ごとで件数のカウント
+SELECT
+  CASE WEEKDAY(indexed_datetime)
+    WHEN 0 THEN '月'
+    WHEN 1 THEN '火'
+    WHEN 2 THEN '水'
+    WHEN 3 THEN '木'
+    WHEN 4 THEN '金'
+    WHEN 5 THEN '土'
+    WHEN 6 THEN '日'
+    ELSE NULL
+  END AS week,
+  COUNT(id)
+FROM sales
+GROUP BY week
