@@ -10,16 +10,19 @@ echo-out-and-error
 
 # 1> は標準出力をファイルに出力「>」と一緒
 # この場合、標準エラーは画面に表示される
-echo-out-and-error 1> result
+echo-out-and-error 1> result.txt
 
 # 2> は標準エラーをファイルに出力
 # この場合、標準出力は画面に表示される
-echo-out-and-error 2> result
+echo-out-and-error 2> result.txt
 
-# 標準出力と標準エラーをフアイルに出力のいくつかの書き方
-echo-out-and-error &> result
-echo-out-and-error >& result
-echo-out-and-error > result 2>&1
+# 標準出力と標準エラーをファイルに出力のいくつかの書き方
+echo-out-and-error &> result.txt
+echo-out-and-error >& result.txt
+echo-out-and-error > result.txt 2>&1
 
 # そもそも標準出力と標準エラーを捨てるなと言う話
 # https://sfujiwara.hatenablog.com/entry/20120613/1339547638
+
+# 標準出力で表示しつつ、ファイルにも出力
+echo 'hello!' | tee hello.txt
