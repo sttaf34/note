@@ -26,3 +26,6 @@ yarn upgrade webdriver
 
 # パッケージ削除
 yarn remove moment
+
+# 脆弱性のあるパッケージの検出
+yarn audit
