@@ -108,7 +108,7 @@ sudo logwatch --output mail
 # そのほか設定
 #
 
-# ホスト名変更
+# ホスト名変更、入り直すと変更される
 sudo hostnamectl set-hostname aws
 
 # ログインのログ確認

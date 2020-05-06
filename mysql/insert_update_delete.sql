@@ -28,3 +28,10 @@ INSERT INTO comments (user_id, post_id, content) (
 INSERT INTO users (first_name, last_name, birthdate, email, height)
 VALUES ('Tetsuo', 'Tetsu', '1979-05-22', 'aaa@example.com', 180)
 ON DUPLICATE KEY UPDATE first_name = 'Nishio', height = 190;
+
+-- サブクエリの値を使って UPDATE
+-- サブクエリの中では users の各行の id が使われるような形になる
+UPDATE users SET height = (
+  SELECT count(user_id) FROM sales
+  WHERE user_id = users.id
+)
