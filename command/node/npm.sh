@@ -3,7 +3,7 @@
 https://qiita.com/standard-software/items/2ac49a409688733c90e7
 
 #
-# グローバル
+# グローバルは npm でやるようにしている
 #
 
 # バージョン確認
@@ -11,6 +11,7 @@ npm -v
 
 # グローバルにインストールし、パスを通す
 npm install -g serve
+npm install -g yarn
 nodenv rehash
 
 # グローバルにインスコしたものの一覧
@@ -22,9 +23,10 @@ npm uninstall -g serve
 
 # 更新
 npm update -g serve
+npm update -g yarn
 
 #
-# プロジェクト内は yarn でやるようにしている
+# プロジェクト内は yarn でやるようにしているので以下はあまり使わないかも
 #
 
 # 対話でカレントディレクトリにpackage.jsonを生成

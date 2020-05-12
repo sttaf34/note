@@ -19,7 +19,3 @@ nodenv global 12.14.0
 # プロジェクトのルートに .node-version を置いとくと、
 # そのバージョンを使ってくれる
 # そのプロジェクト内で nodenv, nodist すると確認できる
-
-# nodenv で特定のバージョンをインスコするときに yarn もインスコするプラグイン
-# yarn は brew でなくてこちらを使おう
-https://github.com/pine/nodenv-yarn-install
