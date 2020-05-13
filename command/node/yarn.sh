@@ -18,11 +18,16 @@ yarn global add windows-build-tools
 # yarn.lock に基づいてインスコ
 yarn install
 
-# パッケージのアップグレード
+# package.json に書いてあるバージョンに応じてのアップグレード
 yarn upgrade chromedriver
-yarn upgrade chromedriver@79.0.0
 yarn upgrade selenium-webdriver
 yarn upgrade webdriver
+
+# バージョン指定してのアップグレード
+yarn upgrade chromedriver@79.0.0
+
+# package.json のバージョンを無視してアップグレード
+yarn upgrade chromedriver --latest
 
 # パッケージ削除
 yarn remove moment
