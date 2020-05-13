@@ -22,8 +22,10 @@ fetch("http://localhost:7400").then((response) => {
 //   console.log(response);
 // })
 
-// 他所様のサイト、Access-Control-Allow-Origin してくれている
-fetch("https://azu.github.io/promises-book/json/book.json").then((response) => {
+// Access-Control-Allow-Origin 設定済みの URL
+const host = "https://sttaf34-netlify-functions.netlify.app/"
+const path = ".netlify/functions/allow-origin"
+fetch(host + path).then((response) => {
   console.log(response);
 })
 
