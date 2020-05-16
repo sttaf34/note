@@ -37,3 +37,6 @@ grep -e '^git' -r ~/Projects/note/command --color=always | head
 grep '100%' -s ~/Projects/note/htmlcss/*
 
 # 2階層以内の範囲を検索対象にしたいとかなら find と組み合わせることになる
+
+# -2 -> 前後2行を表示、数値指定できる
+history | grep -2 'git'
