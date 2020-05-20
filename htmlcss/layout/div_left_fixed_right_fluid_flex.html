@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+/* Flexbox レイアウトまとめ                               */
+/* https://qiita.com/takanorip/items/a51989312160530d89a1 */
+
+div.wrapper {
+  border: 1px solid #333;
+  display: flex; /* 階層下が横並びになる、ブロック要素 */
+}
+
+div.fixed {
+  min-width: 200px;
+  background: #eee;
+}
+
+div.fluid {
+  background: #ccc;
+}
+
+p {
+  padding: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="fixed">
+    <span>固定幅</span>
+  </div>
+  <div class="fluid">
+    <p>
+      あああああああああああああああああああああああああああああああああああああ
+      あああああああああああああああああああああああああああああああああああああ
+      あああああああああああああああああああああああああああああああああああああ
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
