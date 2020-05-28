@@ -1,4 +1,8 @@
 #
+# git hook で設定する用の bash スクリプトのサンプル
+# 
+
+#
 # pre-push
 #
 
@@ -28,3 +32,12 @@ if [ $branch = "master" ]; then
   echo "Do not commit to master branch!"
   exit 1
 fi
+
+# 
+# .gitconfig 
+#
+# [init]
+#   templatedir = ~/Projects/dotfiles/.git_template/
+#
+# ↑この設定をしているので、新たに git リポジトリを作ったときに、
+# .git_template の中のファイルがコピーされる
