@@ -36,12 +36,24 @@ div {
 </div>
 
 <div>
-  <input type="file" name="file">
+  <input type="file" name="file" onchange="console.log('hello');">
+</div>
+
+<div>
+  <p id="quote">
+    【'シングル'】【"ダブル"】
+  </p>
+  <p>
+  【"ダブル"】
+  </p>
+  <textarea id="textarea" rows=8 cols=80></textarea>
 </div>
 
 <div>
   <input type="submit" value="保存！">
 </div>
+
+<iframe id="iframe" src="./img_radio.html" height=250 width=350></iframe>
 
 </body>
 </html>
