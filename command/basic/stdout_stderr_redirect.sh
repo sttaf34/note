@@ -23,6 +23,3 @@ echo-out-and-error > result.txt 2>&1
 
 # そもそも標準出力と標準エラーを捨てるなと言う話
 # https://sfujiwara.hatenablog.com/entry/20120613/1339547638
-
-# 標準出力で表示しつつ、ファイルにも出力
-echo 'hello!' | tee hello.txt
