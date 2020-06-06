@@ -1,4 +1,3 @@
-
 # 構造
 # find ディレクトリ・検索条件・アクション
 
@@ -32,3 +31,11 @@ find . -name "*" \
 
 # -not -name -> ファイル名で除外条件の指定、ドットファイルを除外してみた
 find ~ -mindepth 1 -maxdepth 1 -not -name ".*" -type d
+
+# note-express の下にある各プロジェクトを表示
+cd ~/Projects/note-express
+find . -maxdepth 1 -not -path './.git' -not -path '.' -type d
+
+# note-express の下にある各プロジェクトにコマンド実行
+find . -maxdepth 1 -not -path './.git' -not -path '.' -type d \
+  -exec cp message.txt {} \;
