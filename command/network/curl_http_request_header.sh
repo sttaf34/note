@@ -1,4 +1,3 @@
-
 # HTTPリクエストをそのまま表示してくれるサーバ起動
 cd ~/Projects/typescript-sample && yarn ts-node src/server/show_request_header.ts
 

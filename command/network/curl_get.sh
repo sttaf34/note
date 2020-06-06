@@ -1,4 +1,3 @@
-
 # HTTPレスポンスの表示
 curl https://www.google.co.jp/
 
@@ -29,16 +28,3 @@ curl -s -o /dev/null/ https://www.google.co.jp/ -w '%{size_download}\n'
 
 # リダイレクト先URLを表示
 curl -s -L -o /dev/null/ https://google.co.jp/ -w '%{url_effective}\n'
-
-# ログ表示用のサーバ起動
-cd ~/Projects/typescript-sample && yarn ts-node src/server/server_post.ts
-
-# -X -> HTTPメソッドの指定
-# -d -> パラメータの指定
-curl -X POST http://localhost:5000 -d "name=kawa&age=38"
-
-# -H -> HTTPヘッダの追加
-curl -X POST -H "Content-Type: application/json" -d '{"name":"kawa"}' localhost:5000
-
-# 'content-type': 'application/x-www-form-urlencoded' になる
-curl -X POST http://localhost:5000 -d 'json={"name":"kawa"}'
