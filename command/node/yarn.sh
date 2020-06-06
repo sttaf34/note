@@ -5,32 +5,31 @@ yarn -v
 # https://qiita.com/morrr/items/558bf64cd619ebdacd3d
 # https://qiita.com/rubytomato@github/items/1696530bb9fd59aa28d8
 
-# package.json の dependencies に入るようにインスコ
+# package.json の dependencies に入るようにパッケージ追加
 yarn add typescript
 
-# package.json の devDependencies に入るようにインスコ
+# package.json の devDependencies に入るようにパッケージ追加
 yarn add --dev eslint
 yarn add --dev ts-node-dev
-
-# グローバルにインスコ
-yarn global add windows-build-tools
-
-# yarn.lock に基づいてインスコ
-yarn install
-
-# package.json に書いてあるバージョンに応じてのアップグレード
-yarn upgrade chromedriver
-yarn upgrade selenium-webdriver
-yarn upgrade webdriver
-
-# バージョン指定してのアップグレード
-yarn upgrade chromedriver@79.0.0
-
-# package.json のバージョンを無視してアップグレード
-yarn upgrade chromedriver --latest
 
 # パッケージ削除
 yarn remove moment
 
+# package.json に基づいてパッケージ追加、git clone 直後等に使う
+yarn install
+
+# package.json のバージョンを無視して全パッケージを更新
+yarn upgrade --latest
+
+# バージョン指定してのパッケージの更新
+yarn upgrade chromedriver@79.0.0
+
+# package.json のバージョンを無視してのパッケージの更新
+yarn upgrade chromedriver --latest
+
 # 脆弱性のあるパッケージの検出
 yarn audit
+
+# グローバルにインストール
+# グローバルへのインストールは npm でやっているではある
+yarn global add windows-build-tools
