@@ -1,4 +1,3 @@
-
 # history実行結果は↓のような構造になってる
 # 1 ls
 # 2 pwd
@@ -29,3 +28,7 @@ history | awk '{print $1}' | less
 # パイプで渡されたものを一行づつでなく、
 # 複数行の文字列として文字列検索して切り取って表示
 history | awk '/150/, /170/'
+
+# find で出力したパスのリストを加工するのにも使ってみた形
+find ~/Projects -mindepth 1 -maxdepth 1 -not -name ".*" -type d | \
+awk '{print "cd " $0 " && code -a ."}'
