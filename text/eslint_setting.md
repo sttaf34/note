@@ -6,6 +6,9 @@ yarn eslint src/App.tsx
 ## src下の全ファイルでlintを実行
 yarn eslint src/**/*.tsx
 
+## 拡張子指定
+yarn eslint --ext .ts,.tsx src/**
+
 ## 使われている設定を出力
 yarn eslint --print-config src/App.tsx > eslint.json
 
