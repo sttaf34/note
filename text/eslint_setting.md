@@ -70,6 +70,13 @@ yarn add --dev \
 - github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
 - かなり広い範囲ということ
 
+## eslint-plugin-jest
+- github.com/jest-community/eslint-plugin-jest
+- Jest に関するルールを定義している
+- github.com/jest-community/eslint-plugin-jest/tree/master/docs/rules にある
+- 「ルールの設定」も用意してくれている
+- github.com/jest-community/eslint-plugin-jest/blob/master/src/index.ts にある
+
 ## eslint-plugin-prettier
 - github.com/prettier/eslint-plugin-prettier
 - Prettier に関するルールを定義している
@@ -91,7 +98,17 @@ yarn add --dev \
 
 # まとめ
 
-## extends をどう設定するか
+## 結局 extends をどう設定するか
+
+### TypeScript
+"extends": [
+  "airbnb-base",
+  "plugin:@typescript-eslint/recommended",
+  "prettier",
+  "prettier/@typescript-eslint",
+]
+
+### TypeScript, React
 "extends": [
   "airbnb",
   "plugin:@typescript-eslint/recommended",
@@ -100,9 +117,21 @@ yarn add --dev \
   "prettier/react",
 ]
 
+### TypeScript, Jest
 "extends": [
   "airbnb-base",
   "plugin:@typescript-eslint/recommended",
+  "plugin:jest/recommended",
   "prettier",
   "prettier/@typescript-eslint",
+]
+
+### TypeScript, React, Jest
+"extends": [
+  "airbnb",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:jest/recommended",
+  "prettier",
+  "prettier/@typescript-eslint",
+  "prettier/react",
 ]
