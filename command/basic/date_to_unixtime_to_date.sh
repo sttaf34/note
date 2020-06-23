@@ -16,6 +16,9 @@ date -d "2020-02-11 19:00:00" +%s
 # 現在 unixtime を出力
 date +%s
 
+# 年月日の階層でディレクトリを作る
+mkdir -p ./log/`date '+%Y/%m/%d'`
+
 #
 # Mac
 #
