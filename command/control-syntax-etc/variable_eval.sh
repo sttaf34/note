@@ -1,17 +1,16 @@
-
 # 変数に代入して使用
 TEXT='This is an apple.'
 echo $TEXT
 echo ${TEXT}
 
-# これも期待どおりに動く
+# これだと cd が動作する
 PATH_1='../'
 cd $PATH_1
 
 # チルダ絡み
 PATH_2='~/'
-cd $PATH_2      # これはチルダが展開されないので動かない
-eval cd $PATH_2 # これはチルダが展開されるので動く
+cd $PATH_2      # これはチルダが展開されないので cd できない
+eval cd $PATH_2 # これはチルダが展開されて cd が動作する
 
 # チルダ展開して変数に格納
 PATH_3=`eval 'echo ~/'`
