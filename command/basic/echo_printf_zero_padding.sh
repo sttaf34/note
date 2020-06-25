@@ -1,3 +1,6 @@
+# 引数の内容を標準出力に出力する
+echo "Hey!"
+
 # -e -> 改行を表示する
 echo -e "apple\norange\ngrape"
 
