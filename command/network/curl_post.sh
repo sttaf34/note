@@ -15,6 +15,13 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"kawa"}' localhost:
 # 'content-type': 'application/x-www-form-urlencoded' になる
 curl -X POST http://localhost:5000 -d 'json={"name":"kawa"}'
 
+# ヒアドキュメントで JSON を渡してみる
+curl -H 'Content-Type: application/json; charset=utf-8' \
+  -X POST https://sttaf34-netlify-functions.netlify.app/.netlify/functions/index \
+  -d @- << EOF
+'{"name":"sttaf34"}'
+EOF
+  
 #
 # ファイルアップロード
 #
