@@ -51,9 +51,11 @@ yarn add --dev \
 ## eslint-plugin-react-hooks
 - github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 - React Hooks に関するルールを定義している
+- plugins: ["@typescript-eslint", "react-hooks", "prettier"] <= 設定に追加する
 
 ## eslint-config-airbnb
 - オススメの「ルールの設定」を用意してくれている
+- github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
 - eslint-plugin-jsx-a11y, eslint-plugin-react, eslint-plugin-react-hooks が対象
 - 内部で eslint-config-airbnb-base を読み込んでいる
 
@@ -111,6 +113,7 @@ yarn add --dev \
 ### TypeScript, React
 "extends": [
   "airbnb",
+  "airbnb/hooks",
   "plugin:@typescript-eslint/recommended",
   "prettier",
   "prettier/@typescript-eslint",
@@ -129,6 +132,7 @@ yarn add --dev \
 ### TypeScript, React, Jest
 "extends": [
   "airbnb",
+  "airbnb/hooks",
   "plugin:@typescript-eslint/recommended",
   "plugin:jest/recommended",
   "prettier",
