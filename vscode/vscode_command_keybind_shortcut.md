@@ -9,11 +9,11 @@ View: Toggle Maximized Panel
 View: Toggle Word Wrap
 Tasks: Rerun Last Task
 Tasks: Run Task
-View: Split Editor Down
 File: Reveal Active File in Side Bar
 View: Move Panel Right
 View: Move Panel Bottom
 vscode-json: *
+View: Close All Editors
 
 # よく使うキーバインド
 
@@ -43,12 +43,9 @@ F12      F12      定義にジャンプ
 ⌥スペ   ＾スペ   補完候補表示
 ⌘ＫＦ   ＾ＫＦ   選択範囲のフォーマット
 
-         ＾⌥Ｋ   ブクマのトグル
-         ＾⌥Ｌ   次のブクマへ移動
-
 ## エディタ・マルチカーソル
-⌘⌥▲   ＾⌥▲   カーソル上に追加
-⌘⌥▼   ＾⌥▼   カーソル下に追加
+⌘⌥▲   ＾⌥▲   マルチカーソルを上に追加
+⌘⌥▼   ＾⌥▼   マルチカーソルを下に追加
 ⌘Ｄ     ＾Ｄ     現在選択中と同じ箇所にカーソル追加
 ⌘ＫＤ   ＾ＫＤ   ⌘Ｄ、＾Ｄで選択するときのスキップ
 ↑⌘Ｌ   ↑＾Ｌ   現在選択中と同じ箇所全てにカーソル追加
