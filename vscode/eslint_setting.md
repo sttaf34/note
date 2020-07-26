@@ -100,18 +100,19 @@ yarn add --dev \
 
 # まとめ
 
-## 結局 extends をどう設定するか
+## 結局 extends, plugins をどう設定するか
 
 ### TypeScript
-"extends": [
+extends: [
   "airbnb-base",
   "plugin:@typescript-eslint/recommended",
   "prettier",
   "prettier/@typescript-eslint",
 ]
+plugins: ["@typescript-eslint", "prettier"]
 
 ### TypeScript, React
-"extends": [
+extends: [
   "airbnb",
   "airbnb/hooks",
   "plugin:@typescript-eslint/recommended",
@@ -119,18 +120,20 @@ yarn add --dev \
   "prettier/@typescript-eslint",
   "prettier/react",
 ]
+plugins: ["@typescript-eslint", "react-hooks", "prettier"]
 
 ### TypeScript, Jest
-"extends": [
+extends: [
   "airbnb-base",
   "plugin:@typescript-eslint/recommended",
   "plugin:jest/recommended",
   "prettier",
   "prettier/@typescript-eslint",
 ]
+plugins: ["@typescript-eslint", "prettier"]
 
 ### TypeScript, React, Jest
-"extends": [
+extends: [
   "airbnb",
   "airbnb/hooks",
   "plugin:@typescript-eslint/recommended",
@@ -139,3 +142,4 @@ yarn add --dev \
   "prettier/@typescript-eslint",
   "prettier/react",
 ]
+plugins: ["@typescript-eslint", "react-hooks", "prettier"]
