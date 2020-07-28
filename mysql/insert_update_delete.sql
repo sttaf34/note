@@ -11,10 +11,11 @@ INSERT INTO users (first_name, last_name, birthdate, email, height)
 VALUES ('Tetsuo', 'Tetsu', '1979-05-22', NULL, 180);
 
 -- UPDATE
-UPDATE posts SET title = '無題', content = '' WHERE id = 1
+UPDATE posts SET title = '無題', content = '' WHERE id = 1;
+UPDATE users SET updated_at = NOW() WHERE id = 1;
 
 -- DELETE
-DELETE FROM users WHERE id = 3
+DELETE FROM users WHERE id = 3;
 
 -- SELECT で取得した結果を INSERT
 INSERT INTO comments (user_id, post_id, content) (
@@ -34,4 +35,4 @@ ON DUPLICATE KEY UPDATE first_name = 'Nishio', height = 190;
 UPDATE users SET height = (
   SELECT count(user_id) FROM sales
   WHERE user_id = users.id
-)
+);
