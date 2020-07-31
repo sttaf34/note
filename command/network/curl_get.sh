@@ -28,3 +28,6 @@ curl -s -o /dev/null/ https://www.google.co.jp/ -w '%{size_download}\n'
 
 # リダイレクト先URLを表示
 curl -s -L -o /dev/null/ https://google.co.jp/ -w '%{url_effective}\n'
+
+# -m -> タイムアウト秒数指定
+curl -m 2 https://sttaf34-netlify-functions.netlify.app/.netlify/functions/no-response
