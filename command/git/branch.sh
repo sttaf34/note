@@ -1,3 +1,5 @@
+# ブランチ作って、そのブランチにチェックアウト
+git checkout -b NEW_BRANCH_NAME
 
 # -a -> リモートを含んで、すべてのブランチ一覧の表示
 git branch -a
