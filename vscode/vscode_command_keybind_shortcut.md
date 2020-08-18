@@ -12,8 +12,10 @@ Tasks: Run Task
 File: Reveal Active File in Side Bar
 View: Move Panel Right
 View: Move Panel Bottom
-vscode-json: *
 View: Close All Editors
+View: Previous Panel View
+View: Next Panel View
+vscode-json: *
 
 # よく使うキーバインド
 
@@ -38,7 +40,7 @@ F12      F12      定義にジャンプ
 ↑F12    ↑F12    使っている箇所の一覧を表示
 ⌘ＫＩ   ＾ＫＩ   現在シンボルの型などの情報表示
 ⌥スペ   ＾スペ   補完候補表示
-⌘．              Quick Fix...
+⌘．     ＾．     Quick Fix...
 
 ⌥▲     ⌥▲     現在行or選択範囲を↑に移動
 ⌥▼     ⌥▼     現在行or選択範囲を↓に移動
@@ -59,13 +61,17 @@ F5     F5   次のブレークポイントへ
 F9     F9   ブレークポイントのトグル
 F10    F10  ステップオーバー、1行進む
 
-## フォーカス
+## フォーカス・サイドバー
 ↑⌘Ｅ ↑＾Ｅ エクスプローラへ
 ↑⌘Ｆ ↑＾Ｆ 検索へ
 ↑＾Ｇ ↑＾Ｇ ソース管理へ
 ↑⌘Ｄ ↑＾Ｄ デバッグへ
-↑⌘Ｘ ↑＾Ｘ 拡張機能へ
+↑⌘Ｘ ↑＾Ｘ 拡張機能へ（View: Show Extentions）
+
+## フォーカス・パネル
+⌘Ｊ   ＾Ｊ   パネルの開閉
 ↑⌘Ｍ ↑＾Ｍ PROBLEMS の開閉
+↑⌘Ｕ ↑＾Ｕ OUTPUT の開閉
 ↑⌘Ｙ ↑＾Ｙ DEBUG CONSOLE の開閉
 ⌥Ｔ   ⌥Ｔ   TERMINAL の開閉
 
