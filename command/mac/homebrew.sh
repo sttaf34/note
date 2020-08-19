@@ -1,5 +1,4 @@
-
-brew update # Homebrewの本体のアップデート
+brew update # Homebrew の本体のアップデート
 brew doctor # いろいろ診断してくれる
 brew list   # インスコ済をリスト表示
 
@@ -8,11 +7,11 @@ brew install jq # jq をインスコ
 brew remove jq  # jq を削除
 brew upgrade jq # jq をバージョンアップ
 
-brew tap                      # 非公式の formula のインストールしたものの一覧
+brew tap                      # tap したものの一覧を表示
 brew tap beeftornado/rmtree   # 非公式の formula のインストール
 brew untap beeftornado/rmtree # 非公式の formula の削除
 
-# 新しいMacをセットアップするとき
+# 新しい Mac をセットアップするとき
 brew bundle --file=~/Projects/dotfiles/Brewfile
 
 # 現在の設定を書き出す
