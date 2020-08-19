@@ -10,3 +10,11 @@ for i in {1..20}; do
     echo $i
   fi
 done
+
+# 正規表現で文字列を含むの判定
+TEXT='This is an apple.'
+if [[ $TEXT =~ apple.$ ]]; then
+  echo 'YES'
+else
+  echo 'NO'
+fi
