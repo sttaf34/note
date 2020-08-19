@@ -11,3 +11,11 @@ ln -s /home/ubuntu/sttaf34.net /var/www/html
 ln -s \
   ~/Projects/note-typescript/node_modules/chromedriver/bin/chromedriver \
   ~/Projects/note-typescript/chromedriver
+
+ln -s \
+  ~/Projects/note-firebase/README.md \
+  ~/Projects/note-firebase/hosting/README.md
+
+ln -s \
+  ~/Projects/note-firebase/firestore.rules \
+  ~/Projects/note-firebase/hosting/firestore.rules
