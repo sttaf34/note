@@ -1,4 +1,3 @@
-
 # ファイルの閲覧
 cat scratch.md
 

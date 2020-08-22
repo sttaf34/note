@@ -1,5 +1,5 @@
-# 文字列の中にコマンド実行を書く command substitution 
-echo "Today is '$(date)'."
+# 文字列の中にコマンド実行を書く command substitution
+echo "Today is $(date)."
 
 # ~/Projects/dotfiles 下のディレクトリ数の取得
 find ~/Projects/dotfiles -type d | wc -l
