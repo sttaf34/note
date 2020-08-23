@@ -1,4 +1,3 @@
-
 # Dockのアプリ側にスペース追加
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
@@ -11,7 +10,7 @@ killall Dock
 
 
 # スクショの保存場所変更
-defaults write com.apple.screencapture location ~/Workspace/
+defaults write com.apple.screencapture location ~/Desktop/
 
 # スクショのファイル名変更
 defaults write com.apple.screencapture name ""
