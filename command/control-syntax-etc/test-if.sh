@@ -35,3 +35,16 @@ VARIABLE=example.pdf
 if [[ $VARIABLE =~ pdf$ ]]; then
   echo PDF!
 fi
+
+# 標準出力の結果に応じて何かをしようとする場合
+RESULT=$(echo '')
+echo $RESULT
+if [ -n "$RESULT" ]; then
+  echo "RESULTには何かが入っている" # 通らない
+fi
+
+RESULT=$(echo 'Hey!')
+echo $RESULT
+if [ -n "$RESULT" ]; then
+  echo "RESULTには何かが入っている" # 通る
+fi
