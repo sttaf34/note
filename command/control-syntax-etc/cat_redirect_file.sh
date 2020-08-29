@@ -12,3 +12,6 @@ cat *.md > new.md
 
 # 左側の標準出力を右側のファイルの末尾に追記、ファイルがなければ作成
 cat .gitignore >> new.md
+
+# パイプの渡す方で printf を使いたい場合に cat の手を借りる
+echo 85 | printf "%04d" $(cat)
