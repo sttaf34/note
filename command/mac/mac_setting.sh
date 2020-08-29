@@ -30,3 +30,19 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
 
 # 再起動で有効化
 killall Finder
+
+
+
+# キーリピートの速度設定
+# ログアウトしてログインすると反映される
+defaults write -g InitialKeyRepeat -int 13
+defaults write -g KeyRepeat -float 1.8
+
+# キーリピートの速度設定の確認
+# 環境設定での最速値は InitialKeyRepeat => 15 KeyRepeat => 2
+defaults read -g InitialKeyRepeat
+defaults read -g KeyRepeat
+
+# これだと早すぎた
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
