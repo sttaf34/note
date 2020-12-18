@@ -1,4 +1,3 @@
-
 # リモートの変更状況一式をダウンロードする、マージはしない
 # すごい数のブランチがある場合にも全部ダウンロードされる
 git fetch
@@ -13,3 +12,8 @@ git merge master origin/master
 # リモートにだけ存在している特定のブランチにチェックアウト
 # git checkout -b <ローカルで新たに作成するブランチ名> <リモートのブランチ名>
 git checkout -b branch_a origin/branch_a
+
+# git branch -a で表示されるリモートブランチが削除済のときに、
+# それをローカルでも表示されないようにする
+git fetch -p
+git fetch --prune
