@@ -27,6 +27,11 @@ yarn add --dev \
   eslint-config-prettier eslint-plugin-prettier eslint-plugin-import \
   eslint-config-airbnb-base
 
+# 設定の値
+- off   0
+- warn  1
+- error 2
+
 # 各パッケージごとのメモ
 
 ## 前提
