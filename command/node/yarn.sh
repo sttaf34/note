@@ -30,6 +30,12 @@ yarn upgrade chromedriver --latest
 # 脆弱性のあるパッケージの検出
 yarn audit
 
+# 古いパッケージの一覧を表示
+yarn outdated
+
+# GitHub 上の Dependabot alerts に出ているものを調べる
+yarn why PACKAGE
+
 # グローバルにインストール
 # グローバルへのインストールは npm でやっているではある
 yarn global add windows-build-tools
