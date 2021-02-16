@@ -60,3 +60,13 @@ curl -X POST \
 # abcdefg
 #
 # --------------------------73023618d8f6e843--
+
+# https://developers.google.com/identity/protocols/oauth2/native-app
+# リフレッシュトークンを使って、アクセストークンの再取得
+curl -X POST https://oauth2.googleapis.com/token \
+  --data "refresh_token=$REFRESH_TOKEN" \
+  --data "client_id=$CLIENT_ID" \
+  --data "grant_type=refresh_token"
+
+# https://developers.google.com/identity/protocols/oauth2#expiration
+# リフレッシュトークンの期限に関して書いてある
