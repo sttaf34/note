@@ -1,6 +1,8 @@
-# スコープ https://www.googleapis.com/auth/drive.file で
-# アクセストークンを取得し、変数 ACCESS_TOKEN にセットしてあるという前提
+#
+# スコープ https://www.googleapis.com/auth/drive.file の場合
+#
 
+# アクセストークンを取得し、変数 ACCESS_TOKEN にセットしてあるという前提
 # https://developers.google.com/drive/api/v3/reference/about/get
 curl 'https://www.googleapis.com/drive/v3/about?fields=user' \
   --header "Authorization: Bearer $ACCESS_TOKEN"
@@ -70,3 +72,30 @@ curl -X POST https://oauth2.googleapis.com/token \
 
 # https://developers.google.com/identity/protocols/oauth2#expiration
 # リフレッシュトークンの期限に関して書いてある
+
+
+#
+# スコープ https://www.googleapis.com/auth/drive.appdata の場合
+#
+
+# ファイルの一覧取得
+# https://developers.google.com/drive/api/v3/reference/files/list
+curl 'https://www.googleapis.com/drive/v3/files?spaces=appDataFolder' \
+  --header "Authorization: Bearer $ACCESS_TOKEN"
+
+# ファイルのアップロード
+# https://developers.google.com/drive/api/v3/appdata
+# Google Drive の設定のアプリの管理のところでファイルの容量だけ確認できる
+# 実行の都度新しいファイルが作られる
+curl -X POST \
+  --header "Authorization: Bearer $ACCESS_TOKEN" \
+  -F "metadata={name: 'sample.txt', parents: ['appDataFolder'] };type=application/json;charset=UTF-8" \
+  -F "file=@sample.txt;type=text/plain" \
+  "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart"
+
+# ファイルの ID を指定することで上書きする
+curl -X PATCH \
+  --header "Authorization: Bearer $ACCESS_TOKEN" \
+  -F "metadata={name: 'sample.txt', parents: ['appDataFolder'] };type=application/json;charset=UTF-8" \
+  -F "file=@sample.txt;type=text/plain" \
+  "https://www.googleapis.com/upload/drive/v3/files/$FILE_ID?uploadType=multipart"
