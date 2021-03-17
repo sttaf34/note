@@ -43,3 +43,6 @@ git log -p ~/Projects/note/command/basic/tail.sh
 # 日付で絞り込み
 git log --since="10 days ago" --until="8 days ago"
 git log --since="2019/12/01" --until="2019/12/31"
+
+# 途中でパスを変更していたとして、パス変更前の内容も含める
+git log --follow ~/Projects/note/command/basic/tail.sh
